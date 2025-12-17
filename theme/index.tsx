@@ -42,6 +42,7 @@ declare global {
 
 function Layout(props: Parameters<typeof BaseLayout>[0]) {
   const { pathname } = useLocation();
+  const { page } = usePageData();
 
   const subsite = SUBSITES_CONFIG.find((s) => pathname.includes(s.value));
 
@@ -49,6 +50,46 @@ function Layout(props: Parameters<typeof BaseLayout>[0]) {
     <>
       <Head>
         <htmlAttrs data-subsite={subsite ? subsite.value : 'guide'} />
+        {(() => {
+          const toISO = (val: any) => {
+            if (!val) return '';
+            const d = new Date(val);
+            return Number.isNaN(d.getTime()) ? '' : d.toISOString();
+          };
+          const publishedISO = toISO(page?.frontmatter?.date);
+          const updatedISO = toISO(
+            (page as any)?.lastUpdated ?? page?.frontmatter?.date,
+          );
+          const isDeprecated = Boolean(page?.frontmatter?.deprecated);
+          const title = (page as any)?.title || '';
+          const jsonld =
+            updatedISO || publishedISO
+              ? JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'Article',
+                  headline: title,
+                  datePublished: publishedISO || undefined,
+                  dateModified: updatedISO || undefined,
+                })
+              : '';
+          return (
+            <>
+              {updatedISO && (
+                <meta property="article:modified_time" content={updatedISO} />
+              )}
+              {updatedISO && (
+                <meta name="docsearch:updated_at" content={updatedISO} />
+              )}
+              {isDeprecated && (
+                <meta name="docsearch:deprecated" content="true" />
+              )}
+              {isDeprecated && (
+                <meta name="docsearch:tags" content="deprecated" />
+              )}
+              {jsonld && <script type="application/ld+json">{jsonld}</script>}
+            </>
+          );
+        })()}
       </Head>
       <BaseLayout
         {...props}
@@ -223,8 +264,73 @@ const Search = (props?: Partial<SearchProps> | undefined) => {
         indexName: 'lynx_next',
         searchParameters: {
           facetFilters: [`lang:${lang}`],
+          optionalFilters: [
+            'deprecated:false',
+            'isDeprecated:false',
+            'is_outdated:false',
+            'isLatest:true',
+          ],
+          sumOrFiltersScores: true,
+          getRankingInfo: true,
         },
         maxResultsPerGroup: 5,
+        transformItems: (items: any[]) => {
+          const getTs = (item: any) => {
+            const pick = (k: string) => {
+              const v = (item as any)[k];
+              return typeof v === 'string' && v ? v : undefined;
+            };
+            const s =
+              pick('updated_at') ||
+              pick('docsearch:updated_at') ||
+              pick('modified_time') ||
+              pick('dateModified') ||
+              pick('datePublished') ||
+              pick('lastmod') ||
+              pick('published_at') ||
+              pick('date');
+            if (s) {
+              const d = new Date(s);
+              const t = d.getTime();
+              if (!Number.isNaN(t)) return t;
+            }
+            const url = String(item.url || '');
+            if (url.includes('/next')) return Number.MAX_SAFE_INTEGER;
+            const m = url.match(/\/(\d+)\.(\d+)\//);
+            if (m) return Number(m[1]) * 100 + Number(m[2]);
+            return 0;
+          };
+          const hasDeprecated = (it: any) => {
+            const t = String((it as any).content || '').toLowerCase();
+            if (t.includes('deprecated') || t.includes('弃用')) return true;
+            const u = String((it as any).url || '').toLowerCase();
+            return u.includes('deprecated');
+          };
+          const groups = new Map<number, any[]>();
+          const scores: number[] = [];
+          items.forEach((it) => {
+            const s = (it as any)._rankingInfo?.rankingScore;
+            const key = typeof s === 'number' ? s : -1;
+            if (!groups.has(key)) {
+              groups.set(key, []);
+              scores.push(key);
+            }
+            groups.get(key)!.push(it);
+          });
+          scores.sort((a, b) => b - a);
+          const out: any[] = [];
+          scores.forEach((score) => {
+            const arr = groups.get(score)!;
+            arr.sort((a, b) => {
+              const ad = hasDeprecated(a) ? 1 : 0;
+              const bd = hasDeprecated(b) ? 1 : 0;
+              if (ad !== bd) return ad - bd;
+              return getTs(b) - getTs(a);
+            });
+            out.push(...arr);
+          });
+          return out;
+        },
         ...props?.docSearchProps,
       }}
       locales={ZH_LOCALES}
