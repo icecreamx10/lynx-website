@@ -1,0 +1,182 @@
+[
+  {
+    "type": "file",
+    "name": "AboutPanelOptionsOptions",
+    "label": "AboutPanelOptionsOptions"
+  },
+  {
+    "type": "file",
+    "name": "AddRepresentationOptions",
+    "label": "AddRepresentationOptions"
+  },
+  {
+    "type": "file",
+    "name": "App",
+    "label": "App"
+  },
+  {
+    "type": "file",
+    "name": "ApplicationInfoForProtocolReturnValue",
+    "label": "ApplicationInfoForProtocolReturnValue"
+  },
+  {
+    "type": "file",
+    "name": "BitmapOptions",
+    "label": "BitmapOptions"
+  },
+  {
+    "type": "file",
+    "name": "CommandLine",
+    "label": "CommandLine"
+  },
+  {
+    "type": "file",
+    "name": "ContinueActivityDetails",
+    "label": "ContinueActivityDetails"
+  },
+  {
+    "type": "file",
+    "name": "CPUUsage",
+    "label": "CPUUsage"
+  },
+  {
+    "type": "file",
+    "name": "CreateFromBitmapOptions",
+    "label": "CreateFromBitmapOptions"
+  },
+  {
+    "type": "file",
+    "name": "CreateFromBufferOptions",
+    "label": "CreateFromBufferOptions"
+  },
+  {
+    "type": "file",
+    "name": "Dock",
+    "label": "Dock"
+  },
+  {
+    "type": "file",
+    "name": "JumpListCategory",
+    "label": "JumpListCategory"
+  },
+  {
+    "type": "file",
+    "name": "JumpListItem",
+    "label": "JumpListItem"
+  },
+  {
+    "type": "file",
+    "name": "JumpListSettings",
+    "label": "JumpListSettings"
+  },
+  {
+    "type": "file",
+    "name": "LaunchItems",
+    "label": "LaunchItems"
+  },
+  {
+    "type": "file",
+    "name": "LoginItemSettings",
+    "label": "LoginItemSettings"
+  },
+  {
+    "type": "file",
+    "name": "LoginItemSettingsOptions",
+    "label": "LoginItemSettingsOptions"
+  },
+  {
+    "type": "file",
+    "name": "LynxWindow",
+    "label": "LynxWindow"
+  },
+  {
+    "type": "file",
+    "name": "LynxWindowConstructorOptions",
+    "label": "LynxWindowConstructorOptions"
+  },
+  {
+    "type": "file",
+    "name": "MemoryInfo",
+    "label": "MemoryInfo"
+  },
+  {
+    "type": "file",
+    "name": "Menu",
+    "label": "Menu"
+  },
+  {
+    "type": "file",
+    "name": "MenuItem",
+    "label": "MenuItem"
+  },
+  {
+    "type": "file",
+    "name": "MoveToApplicationsFolderOptions",
+    "label": "MoveToApplicationsFolderOptions"
+  },
+  {
+    "type": "file",
+    "name": "NativeImage",
+    "label": "NativeImage"
+  },
+  {
+    "type": "file",
+    "name": "NotificationResponse",
+    "label": "NotificationResponse"
+  },
+  {
+    "type": "file",
+    "name": "Point",
+    "label": "Point"
+  },
+  {
+    "type": "file",
+    "name": "ProcessMetric",
+    "label": "ProcessMetric"
+  },
+  {
+    "type": "file",
+    "name": "Rectangle",
+    "label": "Rectangle"
+  },
+  {
+    "type": "file",
+    "name": "RelaunchOptions",
+    "label": "RelaunchOptions"
+  },
+  {
+    "type": "file",
+    "name": "ResizeOptions",
+    "label": "ResizeOptions"
+  },
+  {
+    "type": "file",
+    "name": "Settings",
+    "label": "Settings"
+  },
+  {
+    "type": "file",
+    "name": "Size",
+    "label": "Size"
+  },
+  {
+    "type": "file",
+    "name": "Task",
+    "label": "Task"
+  },
+  {
+    "type": "file",
+    "name": "ToBitmapOptions",
+    "label": "ToBitmapOptions"
+  },
+  {
+    "type": "file",
+    "name": "ToDataURLOptions",
+    "label": "ToDataURLOptions"
+  },
+  {
+    "type": "file",
+    "name": "ToPNGOptions",
+    "label": "ToPNGOptions"
+  }
+]

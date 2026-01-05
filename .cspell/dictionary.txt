@@ -84,3 +84,8 @@ Xuan
 yari
 العاشر
 ليونيكود
+maximizable
+minimizable
+AARRGGBB
+Helloooo
+rtfd

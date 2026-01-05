@@ -1,0 +1,19 @@
+[
+  {
+    "type": "dir",
+    "name": "Guides",
+    "label": "Guides",
+    "collapsible": true,
+    "collapsed": false
+  },
+  {
+    "type": "divider"
+  },
+  {
+    "type": "dir",
+    "name": "api",
+    "label": "API",
+    "collapsible": true,
+    "collapsed": false
+  }
+]
