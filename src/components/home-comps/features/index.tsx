@@ -11,7 +11,7 @@ import { ActionBtn } from './action-btn';
 import { FeatureItem } from './feature-item';
 import { IconAndroid, IconHarmony, IconIOS, IconWeb } from './icon';
 import { FeatureIconItem } from './item-icon';
-type FeaturesConfigKey = '/' | '/react/' | '/rspeedy/';
+type FeaturesConfigKey = '/' | '/react/' | '/rspeedy/' | '/lynxtron/';
 
 // 最大倾斜角度（度数）
 const maxDegree = 6;
@@ -212,18 +212,28 @@ const featuresConfig: Record<
       },
     },
   ],
+  '/lynxtron/': [
+    {
+      iconClass: 'config',
+      isRowSet: true,
+      title: {
+        en: 'Placeholder',
+        zh: 'Placeholder',
+      },
+      desc: {
+        en: 'Placeholder',
+        zh: 'Placeholder',
+      },
+    },
+  ],
 };
 
 const Features = ({ src = '/' }: { src?: string }) => {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const lang = useLang() as 'en' | 'zh';
-  const configKey = (
-    src.startsWith('/react/')
-      ? '/react/'
-      : src.startsWith('/rspeedy/')
-        ? '/rspeedy/'
-        : '/'
-  ) as FeaturesConfigKey;
+  const configKey = (Object.keys(featuresConfig).find(
+    (key) => key !== '/' && src.startsWith(key),
+  ) || '/') as FeaturesConfigKey;
   const isMobile = useIfMobile();
 
   const featuresConfigTarget = featuresConfig[configKey];

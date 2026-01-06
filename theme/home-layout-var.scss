@@ -120,6 +120,16 @@
     no-repeat center center;
 }
 
+:root[data-subsite='lynxtron'] {
+  --major-brand-color: #4ff09f;
+  --second-brand-color: rgba(255, 53, 26, 1);
+}
+
+.dark[data-subsite='lynxtron'] {
+  --major-brand-color: #4ff09f;
+  --second-brand-color: rgba(255, 100, 72, 1);
+}
+
 .rspress-home-hero-tagline {
   color: var(--home-features-item-desc-color);
 }

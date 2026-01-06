@@ -108,6 +108,10 @@ $overview-index-color-dark: #f9f9f9;
   @include subsite-theme($react-brand-dark);
 }
 
+:root[data-subsite='lynxtron'] {
+  @include subsite-theme(#4ff09f);
+}
+
 #before-sidebar .border-divider-light {
   border-top: 1.3px solid transparent;
   border-image: var(--rp-c-divider-gradient) 1;

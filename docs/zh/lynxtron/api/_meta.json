@@ -1,182 +1,133 @@
 [
+  { "type": "file", "name": "Variable.app", "label": "变量：app" },
+
+  { "type": "file", "name": "Class.CommandLine", "label": "类：CommandLine" },
+  { "type": "file", "name": "Class.Dock", "label": "类：Dock" },
+  { "type": "file", "name": "Class.LynxWindow", "label": "类：LynxWindow" },
+  { "type": "file", "name": "Class.Menu", "label": "类：Menu" },
+  { "type": "file", "name": "Class.MenuItem", "label": "类：MenuItem" },
+  { "type": "file", "name": "Class.NativeImage", "label": "类：NativeImage" },
+
   {
     "type": "file",
-    "name": "AboutPanelOptionsOptions",
-    "label": "AboutPanelOptionsOptions"
+    "name": "Interface.AboutPanelOptionsOptions",
+    "label": "接口：AboutPanelOptionsOptions"
   },
   {
     "type": "file",
-    "name": "AddRepresentationOptions",
-    "label": "AddRepresentationOptions"
+    "name": "Interface.AddRepresentationOptions",
+    "label": "接口：AddRepresentationOptions"
+  },
+  { "type": "file", "name": "Interface.App", "label": "接口：App" },
+  {
+    "type": "file",
+    "name": "Interface.ApplicationInfoForProtocolReturnValue",
+    "label": "接口：ApplicationInfoForProtocolReturnValue"
   },
   {
     "type": "file",
-    "name": "App",
-    "label": "App"
+    "name": "Interface.BitmapOptions",
+    "label": "接口：BitmapOptions"
   },
   {
     "type": "file",
-    "name": "ApplicationInfoForProtocolReturnValue",
-    "label": "ApplicationInfoForProtocolReturnValue"
+    "name": "Interface.ContinueActivityDetails",
+    "label": "接口：ContinueActivityDetails"
+  },
+  { "type": "file", "name": "Interface.CPUUsage", "label": "接口：CPUUsage" },
+  {
+    "type": "file",
+    "name": "Interface.CreateFromBitmapOptions",
+    "label": "接口：CreateFromBitmapOptions"
   },
   {
     "type": "file",
-    "name": "BitmapOptions",
-    "label": "BitmapOptions"
+    "name": "Interface.CreateFromBufferOptions",
+    "label": "接口：CreateFromBufferOptions"
   },
   {
     "type": "file",
-    "name": "CommandLine",
-    "label": "CommandLine"
+    "name": "Interface.JumpListCategory",
+    "label": "接口：JumpListCategory"
   },
   {
     "type": "file",
-    "name": "ContinueActivityDetails",
-    "label": "ContinueActivityDetails"
+    "name": "Interface.JumpListItem",
+    "label": "接口：JumpListItem"
   },
   {
     "type": "file",
-    "name": "CPUUsage",
-    "label": "CPUUsage"
+    "name": "Interface.JumpListSettings",
+    "label": "接口：JumpListSettings"
   },
   {
     "type": "file",
-    "name": "CreateFromBitmapOptions",
-    "label": "CreateFromBitmapOptions"
+    "name": "Interface.LaunchItems",
+    "label": "接口：LaunchItems"
   },
   {
     "type": "file",
-    "name": "CreateFromBufferOptions",
-    "label": "CreateFromBufferOptions"
+    "name": "Interface.LoginItemSettings",
+    "label": "接口：LoginItemSettings"
   },
   {
     "type": "file",
-    "name": "Dock",
-    "label": "Dock"
+    "name": "Interface.LoginItemSettingsOptions",
+    "label": "接口：LoginItemSettingsOptions"
   },
   {
     "type": "file",
-    "name": "JumpListCategory",
-    "label": "JumpListCategory"
+    "name": "Interface.LynxWindowConstructorOptions",
+    "label": "接口：LynxWindowConstructorOptions"
   },
   {
     "type": "file",
-    "name": "JumpListItem",
-    "label": "JumpListItem"
+    "name": "Interface.MemoryInfo",
+    "label": "接口：MemoryInfo"
   },
   {
     "type": "file",
-    "name": "JumpListSettings",
-    "label": "JumpListSettings"
+    "name": "Interface.MoveToApplicationsFolderOptions",
+    "label": "接口：MoveToApplicationsFolderOptions"
   },
   {
     "type": "file",
-    "name": "LaunchItems",
-    "label": "LaunchItems"
+    "name": "Interface.NotificationResponse",
+    "label": "接口：NotificationResponse"
+  },
+  { "type": "file", "name": "Interface.Point", "label": "接口：Point" },
+  {
+    "type": "file",
+    "name": "Interface.ProcessMetric",
+    "label": "接口：ProcessMetric"
+  },
+  { "type": "file", "name": "Interface.Rectangle", "label": "接口：Rectangle" },
+  {
+    "type": "file",
+    "name": "Interface.RelaunchOptions",
+    "label": "接口：RelaunchOptions"
   },
   {
     "type": "file",
-    "name": "LoginItemSettings",
-    "label": "LoginItemSettings"
+    "name": "Interface.ResizeOptions",
+    "label": "接口：ResizeOptions"
+  },
+  { "type": "file", "name": "Interface.Settings", "label": "接口：Settings" },
+  { "type": "file", "name": "Interface.Size", "label": "接口：Size" },
+  { "type": "file", "name": "Interface.Task", "label": "接口：Task" },
+  {
+    "type": "file",
+    "name": "Interface.ToBitmapOptions",
+    "label": "接口：ToBitmapOptions"
   },
   {
     "type": "file",
-    "name": "LoginItemSettingsOptions",
-    "label": "LoginItemSettingsOptions"
+    "name": "Interface.ToDataURLOptions",
+    "label": "接口：ToDataURLOptions"
   },
   {
     "type": "file",
-    "name": "LynxWindow",
-    "label": "LynxWindow"
-  },
-  {
-    "type": "file",
-    "name": "LynxWindowConstructorOptions",
-    "label": "LynxWindowConstructorOptions"
-  },
-  {
-    "type": "file",
-    "name": "MemoryInfo",
-    "label": "MemoryInfo"
-  },
-  {
-    "type": "file",
-    "name": "Menu",
-    "label": "Menu"
-  },
-  {
-    "type": "file",
-    "name": "MenuItem",
-    "label": "MenuItem"
-  },
-  {
-    "type": "file",
-    "name": "MoveToApplicationsFolderOptions",
-    "label": "MoveToApplicationsFolderOptions"
-  },
-  {
-    "type": "file",
-    "name": "NativeImage",
-    "label": "NativeImage"
-  },
-  {
-    "type": "file",
-    "name": "NotificationResponse",
-    "label": "NotificationResponse"
-  },
-  {
-    "type": "file",
-    "name": "Point",
-    "label": "Point"
-  },
-  {
-    "type": "file",
-    "name": "ProcessMetric",
-    "label": "ProcessMetric"
-  },
-  {
-    "type": "file",
-    "name": "Rectangle",
-    "label": "Rectangle"
-  },
-  {
-    "type": "file",
-    "name": "RelaunchOptions",
-    "label": "RelaunchOptions"
-  },
-  {
-    "type": "file",
-    "name": "ResizeOptions",
-    "label": "ResizeOptions"
-  },
-  {
-    "type": "file",
-    "name": "Settings",
-    "label": "Settings"
-  },
-  {
-    "type": "file",
-    "name": "Size",
-    "label": "Size"
-  },
-  {
-    "type": "file",
-    "name": "Task",
-    "label": "Task"
-  },
-  {
-    "type": "file",
-    "name": "ToBitmapOptions",
-    "label": "ToBitmapOptions"
-  },
-  {
-    "type": "file",
-    "name": "ToDataURLOptions",
-    "label": "ToDataURLOptions"
-  },
-  {
-    "type": "file",
-    "name": "ToPNGOptions",
-    "label": "ToPNGOptions"
+    "name": "Interface.ToPNGOptions",
+    "label": "接口：ToPNGOptions"
   }
 ]

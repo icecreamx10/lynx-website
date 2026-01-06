@@ -36,4 +36,14 @@ export const PACKAGES: Record<string, PackageConfig> = {
       ],
     },
   },
+  lynxtron: {
+    out: 'lynxtron/api',
+    tsconfig: 'scripts/typedoc/tsconfigs/lynxtron.json',
+    en: {
+      entryPoints: ['node_modules/lynxtron/apis/lynxtron.d.ts'],
+    },
+    zh: {
+      entryPoints: ['node_modules/lynxtron/apis/lynxtron.d.ts'],
+    },
+  },
 };

@@ -1,117 +1,153 @@
 [
-  { "type": "file", "name": "Class.CommandLine", "label": "CommandLine" },
-  { "type": "file", "name": "Class.Dock", "label": "Dock" },
-  { "type": "file", "name": "Class.LynxWindow", "label": "LynxWindow" },
-  { "type": "file", "name": "Class.Menu", "label": "Menu" },
-  { "type": "file", "name": "Class.MenuItem", "label": "MenuItem" },
-  { "type": "file", "name": "Class.NativeImage", "label": "NativeImage" },
+  { "type": "file", "name": "Variable.app", "label": "Variable: app" },
+
+  {
+    "type": "file",
+    "name": "Class.CommandLine",
+    "label": "Class: CommandLine"
+  },
+  { "type": "file", "name": "Class.Dock", "label": "Class: Dock" },
+  { "type": "file", "name": "Class.LynxWindow", "label": "Class: LynxWindow" },
+  { "type": "file", "name": "Class.Menu", "label": "Class: Menu" },
+  { "type": "file", "name": "Class.MenuItem", "label": "Class: MenuItem" },
+  {
+    "type": "file",
+    "name": "Class.NativeImage",
+    "label": "Class: NativeImage"
+  },
 
   {
     "type": "file",
     "name": "Interface.AboutPanelOptionsOptions",
-    "label": "AboutPanelOptionsOptions"
+    "label": "Interface: AboutPanelOptionsOptions"
   },
   {
     "type": "file",
     "name": "Interface.AddRepresentationOptions",
-    "label": "AddRepresentationOptions"
+    "label": "Interface: AddRepresentationOptions"
   },
-  { "type": "file", "name": "Interface.App", "label": "App" },
+  { "type": "file", "name": "Interface.App", "label": "Interface: App" },
   {
     "type": "file",
     "name": "Interface.ApplicationInfoForProtocolReturnValue",
-    "label": "ApplicationInfoForProtocolReturnValue"
+    "label": "Interface: ApplicationInfoForProtocolReturnValue"
   },
   {
     "type": "file",
     "name": "Interface.BitmapOptions",
-    "label": "BitmapOptions"
+    "label": "Interface: BitmapOptions"
   },
-  { "type": "file", "name": "Interface.CPUUsage", "label": "CPUUsage" },
+  {
+    "type": "file",
+    "name": "Interface.CPUUsage",
+    "label": "Interface: CPUUsage"
+  },
   {
     "type": "file",
     "name": "Interface.ContinueActivityDetails",
-    "label": "ContinueActivityDetails"
+    "label": "Interface: ContinueActivityDetails"
   },
   {
     "type": "file",
     "name": "Interface.CreateFromBitmapOptions",
-    "label": "CreateFromBitmapOptions"
+    "label": "Interface: CreateFromBitmapOptions"
   },
   {
     "type": "file",
     "name": "Interface.CreateFromBufferOptions",
-    "label": "CreateFromBufferOptions"
+    "label": "Interface: CreateFromBufferOptions"
   },
   {
     "type": "file",
     "name": "Interface.JumpListCategory",
-    "label": "JumpListCategory"
+    "label": "Interface: JumpListCategory"
   },
-  { "type": "file", "name": "Interface.JumpListItem", "label": "JumpListItem" },
+  {
+    "type": "file",
+    "name": "Interface.JumpListItem",
+    "label": "Interface: JumpListItem"
+  },
   {
     "type": "file",
     "name": "Interface.JumpListSettings",
-    "label": "JumpListSettings"
+    "label": "Interface: JumpListSettings"
   },
-  { "type": "file", "name": "Interface.LaunchItems", "label": "LaunchItems" },
+  {
+    "type": "file",
+    "name": "Interface.LaunchItems",
+    "label": "Interface: LaunchItems"
+  },
   {
     "type": "file",
     "name": "Interface.LoginItemSettings",
-    "label": "LoginItemSettings"
+    "label": "Interface: LoginItemSettings"
   },
   {
     "type": "file",
     "name": "Interface.LoginItemSettingsOptions",
-    "label": "LoginItemSettingsOptions"
+    "label": "Interface: LoginItemSettingsOptions"
   },
   {
     "type": "file",
     "name": "Interface.LynxWindowConstructorOptions",
-    "label": "LynxWindowConstructorOptions"
+    "label": "Interface: LynxWindowConstructorOptions"
   },
-  { "type": "file", "name": "Interface.MemoryInfo", "label": "MemoryInfo" },
+  {
+    "type": "file",
+    "name": "Interface.MemoryInfo",
+    "label": "Interface: MemoryInfo"
+  },
   {
     "type": "file",
     "name": "Interface.MoveToApplicationsFolderOptions",
-    "label": "MoveToApplicationsFolderOptions"
+    "label": "Interface: MoveToApplicationsFolderOptions"
   },
   {
     "type": "file",
     "name": "Interface.NotificationResponse",
-    "label": "NotificationResponse"
+    "label": "Interface: NotificationResponse"
   },
-  { "type": "file", "name": "Interface.Point", "label": "Point" },
+  { "type": "file", "name": "Interface.Point", "label": "Interface: Point" },
   {
     "type": "file",
     "name": "Interface.ProcessMetric",
-    "label": "ProcessMetric"
+    "label": "Interface: ProcessMetric"
   },
-  { "type": "file", "name": "Interface.Rectangle", "label": "Rectangle" },
+  {
+    "type": "file",
+    "name": "Interface.Rectangle",
+    "label": "Interface: Rectangle"
+  },
   {
     "type": "file",
     "name": "Interface.RelaunchOptions",
-    "label": "RelaunchOptions"
+    "label": "Interface: RelaunchOptions"
   },
   {
     "type": "file",
     "name": "Interface.ResizeOptions",
-    "label": "ResizeOptions"
+    "label": "Interface: ResizeOptions"
   },
-  { "type": "file", "name": "Interface.Settings", "label": "Settings" },
-  { "type": "file", "name": "Interface.Size", "label": "Size" },
-  { "type": "file", "name": "Interface.Task", "label": "Task" },
+  {
+    "type": "file",
+    "name": "Interface.Settings",
+    "label": "Interface: Settings"
+  },
+  { "type": "file", "name": "Interface.Size", "label": "Interface: Size" },
+  { "type": "file", "name": "Interface.Task", "label": "Interface: Task" },
   {
     "type": "file",
     "name": "Interface.ToBitmapOptions",
-    "label": "ToBitmapOptions"
+    "label": "Interface: ToBitmapOptions"
   },
   {
     "type": "file",
     "name": "Interface.ToDataURLOptions",
-    "label": "ToDataURLOptions"
+    "label": "Interface: ToDataURLOptions"
   },
-  { "type": "file", "name": "Interface.ToPNGOptions", "label": "ToPNGOptions" },
-
-  { "type": "file", "name": "Variable.app", "label": "app" }
+  {
+    "type": "file",
+    "name": "Interface.ToPNGOptions",
+    "label": "Interface: ToPNGOptions"
+  }
 ]

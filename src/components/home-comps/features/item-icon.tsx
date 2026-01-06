@@ -37,6 +37,10 @@ const comps = {
     light: <span />,
     dark: <span />,
   },
+  lynxtron: {
+    light: <span />,
+    dark: <span />,
+  },
 };
 
 export const FeatureIconItem = ({ index }: { index: string }) => {

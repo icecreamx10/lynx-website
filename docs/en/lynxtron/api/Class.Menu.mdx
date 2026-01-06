@@ -5,9 +5,6 @@
 - @generated
   \*/}
 
-{/* Import all components as Lynx to allow dynamic lookup in TSDoc writings. */}
-import \* as Lynx from '@lynx';
-
 [lynxtron](/lynxtron/api/index.mdx) / Menu
 
 # Class: Menu
@@ -20,9 +17,9 @@ import \* as Lynx from '@lynx';
 
 ### new Menu()
 
-```ts
+````ts
 new Menu(): Menu
-```
+~~~
 
 Menu
 
@@ -44,7 +41,7 @@ lynxtron/apis/api/menu.d.ts:13
 
 ```ts
 items: MenuItem[];
-```
+~~~
 
 A `MenuItem[]` array containing the menu's items.
 
@@ -61,7 +58,7 @@ lynxtron/apis/api/menu.d.ts:48
 
 ```ts
 static captureRejections: boolean;
-```
+~~~
 
 Sets or gets the default captureRejection value for all emitters.
 
@@ -79,7 +76,7 @@ Sets or gets the default captureRejection value for all emitters.
 
 ```ts
 readonly static captureRejectionSymbol: typeof captureRejectionSymbol;
-```
+~~~
 
 #### Inherited from
 
@@ -95,7 +92,7 @@ readonly static captureRejectionSymbol: typeof captureRejectionSymbol;
 
 ```ts
 static defaultMaxListeners: number;
-```
+~~~
 
 #### Inherited from
 
@@ -111,7 +108,7 @@ static defaultMaxListeners: number;
 
 ```ts
 readonly static errorMonitor: typeof errorMonitor;
-```
+~~~
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -138,7 +135,7 @@ optional [captureRejectionSymbol]<K>(
    error: Error,
    event: string | symbol, ...
    args: AnyRest): void
-```
+~~~
 
 #### Type Parameters
 
@@ -172,7 +169,7 @@ optional [captureRejectionSymbol]<K>(
 
 ```ts
 addListener<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Alias for `emitter.on(eventName, listener)`.
 
@@ -211,14 +208,14 @@ v0.1.26
 
 ```ts
 emit<K>(eventName: string | symbol, ...args: AnyRest): boolean
-```
+~~~
 
 Synchronously calls each of the listeners registered for the event named`eventName`, in the order they were registered, passing the supplied arguments
 to each.
 
 Returns `true` if the event had listeners, `false` otherwise.
 
-```js
+~~~js
 import EventEmitter from 'node:events';
 const myEmitter = new EventEmitter();
 
@@ -249,7 +246,7 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 // Helloooo! first listener
 // event with parameters 1, 2 in second listener
 // event with parameters 1, 2, 3, 4, 5 in third listener
-```
+~~~
 
 #### Type Parameters
 
@@ -286,12 +283,12 @@ v0.1.26
 
 ```ts
 eventNames(): (string | symbol)[]
-```
+~~~
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
 
-```js
+~~~js
 import EventEmitter from 'node:events';
 const myEE = new EventEmitter();
 myEE.on('foo', () => {});
@@ -302,7 +299,7 @@ myEE.on(sym, () => {});
 
 console.log(myEE.eventNames());
 // Prints: [ 'foo', 'bar', Symbol(symbol) ]
-```
+~~~
 
 #### Returns
 
@@ -326,7 +323,7 @@ v6.0.0
 
 ```ts
 getMaxListeners(): number
-```
+~~~
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](/lynxtron/api/Class.Menu.mdx#defaultmaxlisteners).
@@ -353,7 +350,7 @@ v1.0.0
 
 ```ts
 listenerCount<K>(eventName: string | symbol, listener?: Function): number
-```
+~~~
 
 Returns the number of listeners listening to the event named `eventName`.
 
@@ -395,17 +392,17 @@ v3.2.0
 
 ```ts
 listeners<K>(eventName: string | symbol): Function[]
-```
+~~~
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
-```js
+~~~js
 server.on('connection', (stream) => {
   console.log('someone connected!');
 });
 console.log(util.inspect(server.listeners('connection')));
 // Prints: [ [Function] ]
-```
+~~~
 
 #### Type Parameters
 
@@ -441,7 +438,7 @@ v0.1.26
 
 ```ts
 off<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Alias for `emitter.removeListener()`.
 
@@ -480,25 +477,25 @@ v10.0.0
 
 ```ts
 on<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Adds the `listener` function to the end of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
 already been added. Multiple calls passing the same combination of `eventName` and `listener` will result in the `listener` being added, and called, multiple
 times.
 
-```js
+~~~js
 server.on('connection', (stream) => {
   console.log('someone connected!');
 });
-```
+~~~
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 By default, event listeners are invoked in the order they are added. The`emitter.prependListener()` method can be used as an alternative to add the
 event listener to the beginning of the listeners array.
 
-```js
+~~~js
 const myEE = new EventEmitter();
 myEE.on('foo', () => console.log('a'));
 myEE.prependListener('foo', () => console.log('b'));
@@ -506,7 +503,7 @@ myEE.emit('foo');
 // Prints:
 //   b
 //   a
-```
+~~~
 
 #### Type Parameters
 
@@ -543,23 +540,23 @@ v0.1.101
 
 ```ts
 once<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Adds a **one-time**`listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
 
-```js
+~~~js
 server.once('connection', (stream) => {
   console.log('Ah, we have our first user!');
 });
-```
+~~~
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 By default, event listeners are invoked in the order they are added. The`emitter.prependOnceListener()` method can be used as an alternative to add the
 event listener to the beginning of the listeners array.
 
-```js
+~~~js
 const myEE = new EventEmitter();
 myEE.once('foo', () => console.log('a'));
 myEE.prependOnceListener('foo', () => console.log('b'));
@@ -567,7 +564,7 @@ myEE.emit('foo');
 // Prints:
 //   b
 //   a
-```
+~~~
 
 #### Type Parameters
 
@@ -604,18 +601,18 @@ v0.3.0
 
 ```ts
 prependListener<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
 already been added. Multiple calls passing the same combination of `eventName` and `listener` will result in the `listener` being added, and called, multiple
 times.
 
-```js
+~~~js
 server.prependListener('connection', (stream) => {
   console.log('someone connected!');
 });
-```
+~~~
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
@@ -654,16 +651,16 @@ v6.0.0
 
 ```ts
 prependOnceListener<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
 
-```js
+~~~js
 server.prependOnceListener('connection', (stream) => {
   console.log('Ah, we have our first user!');
 });
-```
+~~~
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
@@ -702,12 +699,12 @@ v6.0.0
 
 ```ts
 rawListeners<K>(eventName: string | symbol): Function[]
-```
+~~~
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
 
-```js
+~~~js
 const emitter = new EventEmitter();
 emitter.once('log', () => console.log('log once'));
 
@@ -729,7 +726,7 @@ const newListeners = emitter.rawListeners('log');
 // Logs "log persistently" twice
 newListeners[0]();
 emitter.emit('log');
-```
+~~~
 
 #### Type Parameters
 
@@ -765,7 +762,7 @@ v9.4.0
 
 ```ts
 removeAllListeners(event?: string | symbol): this
-```
+~~~
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -803,18 +800,18 @@ v0.1.26
 
 ```ts
 removeListener<K>(eventName: string | symbol, listener: (...args: any[]) => void): this
-```
+~~~
 
 Removes the specified `listener` from the listener array for the event named`eventName`.
 
-```js
+~~~js
 const callback = (stream) => {
   console.log('someone connected!');
 };
 server.on('connection', callback);
 // ...
 server.removeListener('connection', callback);
-```
+````
 
 `removeListener()` will remove, at most, one instance of a listener from the
 listener array. If any single listener has been added multiple times to the
@@ -825,7 +822,7 @@ Once an event is emitted, all listeners attached to it at the
 time of emitting are called in order. This implies that any`removeListener()` or `removeAllListeners()` calls _after_ emitting and _before_ the last listener finishes execution
 will not remove them from`emit()` in progress. Subsequent events behave as expected.
 
-```js
+````js
 const myEmitter = new MyEmitter();
 
 const callbackA = () => {
@@ -865,7 +862,7 @@ When a single function has been added as a handler multiple times for a single
 event (as in the example below), `removeListener()` will remove the most
 recently added instance. In the example the `once('ping')`listener is removed:
 
-```js
+~~~js
 const ee = new EventEmitter();
 
 function pong() {
@@ -972,7 +969,7 @@ not prevent the listener from running.
 
 Returns a disposable so that it may be unsubscribed from more easily.
 
-```js
+~~~js
 import { addAbortListener } from 'node:events';
 
 function example(signal) {
@@ -1050,7 +1047,7 @@ the emitter.
 For `EventTarget`s this is the only way to get the event listeners for the
 event target. This is useful for debugging and diagnostic purposes.
 
-```js
+~~~js
 import { getEventListeners, EventEmitter } from 'node:events';
 
 {
@@ -1107,7 +1104,7 @@ For `EventTarget`s this is the only way to get the max event listeners for the
 event target. If the number of event handlers on a single EventTarget exceeds
 the max set, the EventTarget will print a warning.
 
-```js
+~~~js
 import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 {
@@ -1156,7 +1153,7 @@ static listenerCount(emitter: EventEmitter<DefaultEventMap>, eventName: string |
 
 A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
 
-```js
+~~~js
 import { EventEmitter, listenerCount } from 'node:events';
 const myEmitter = new EventEmitter();
 myEmitter.on('event', () => {});
@@ -1203,7 +1200,7 @@ static on(
 options?: StaticEventEmitterOptions): AsyncIterator<any, any, any>
 ```
 
-```js
+~~~js
 import { on, EventEmitter } from 'node:events';
 
 (async () => {
@@ -1232,7 +1229,7 @@ composed of the emitted event arguments.
 
 An `AbortSignal` can be used to cancel waiting on events:
 
-```js
+~~~js
 import { on, EventEmitter } from 'node:events';
 const ac = new AbortController();
 
@@ -1304,7 +1301,7 @@ given event.
 This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
 semantics and does not listen to the `'error'` event.
 
-```js
+~~~js
 import { once, EventEmitter } from 'node:events';
 
 async function run() {
@@ -1336,7 +1333,7 @@ The special handling of the `'error'` event is only used when `events.once()`is 
 '`error'` event itself, then it is treated as any other kind of event without
 special handling:
 
-```js
+~~~js
 import { EventEmitter, once } from 'node:events';
 
 const ee = new EventEmitter();
@@ -1509,3 +1506,4 @@ v15.4.0
 #### Defined in
 
 .pnpm/@types+node@18.19.68/node_modules/@types/node/events.d.ts:375
+````
